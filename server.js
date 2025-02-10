@@ -13,7 +13,7 @@ app.post('/', (req, res) => {
         ...req.body
     }
 
-    res.json(resposneBody)
+    res.json(responseBody)
 });
 
 const port = process.env.PORT || 3000; 
