@@ -12,7 +12,7 @@ describe('POST /', () => {
         chai
             .request(server)
             .post('/')
-            .set('accpet', 'application/json')
+            .set('accept', 'application/json')
             .send(sampleBody)
             .end((err, response) => { 
                 expect(err).to.be.null; 
