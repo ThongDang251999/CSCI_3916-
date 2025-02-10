@@ -8,8 +8,11 @@ app.use(express.json()); //middleware that parses JSON in the request body
 app.post('/', (req, res) => {
     const acceptHeader = req.get['accept'];
 
-    const responseBody = { 
-        acceptHeader: acceptHeader, 
+    if (acceptHeader) {
+        res.setHeader('Accept', acceptHeader);
+    }
+    
+    const responseBody = {  
         ...req.body
     }
 
